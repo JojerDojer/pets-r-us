@@ -1,0 +1,177 @@
+/**
+============================================
+; Title: main.css
+; Author: John Davidson
+; Date: 06/18/2023
+; Description: CSS styling Pets-R-Us weekly assignment.
+============================================
+*/
+
+/* The body styling. */
+body {
+  font-family: 'Wix Madefor Display', sans-serif;
+  line-height: 1.5;
+  background-color: #C0DCDC;;
+}
+
+/* The header styling. */
+h1, h2, h3 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/* Styling for width and spacing of the container. */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+/* The styling for the navigation bar*/
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar li {
+  margin-right: 20px;
+}
+
+.nav-bar li:last-child {
+  margin-right: 0;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1E385D;
+  font-size: 20px;
+}
+
+.nav-bar a:hover {
+  background-color: #C0DCDC;
+  border-radius: 5px;
+
+}
+
+/* The styling for the location class. */
+.location {
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Styling for the hours class. */
+.hours {
+  margin-bottom: 20px;
+}
+
+/* The styling for the dog of the week image. */
+#dog-week img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 4px;
+
+}
+
+/* The styling for testimonial classes. */
+.testimonial {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* The styling for the paragraphs nested in the testimonial classes.*/
+.testimonial p {
+  font-size: 18px;
+  font-style: italic;
+}
+
+/* Standard Paragraph styling. */
+p {
+  font-size: 20px;
+}
+
+/* The styling for the contact form. */
+.contact-form {
+  margin: 0 auto;
+  width: 500px;
+  background-color: #E8ECE9;
+  border: 1px solid #777;
+  border-radius: 10px;
+  }
+
+/* Creating more space in the form element. */
+form {
+  margin: 35px;
+}
+
+/* The styling of the input field. */
+.contact-input {
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #777;
+  border-radius: 14px;
+  outline: none;
+}
+
+/* This aligns the email input field with the other fields. */
+.email-margin {
+  margin-right: 40px;
+}
+
+/* The styling for the footer on each page. */
+#footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 2px;
+  background-color: #f5f5f5;
+}
+
+/* GROOMING STYLING */
+
+/* The styling for the dog wash image. */
+.dog-wash {
+  max-width: 100%;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+/* The styling for the pricing table. */
+table {
+  border-collapse: collapse;
+  width: 30%;
+}
+
+/* The styling for table head / table data elements. */
+th, td {
+  border: 2px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+
+
+
+
+
+

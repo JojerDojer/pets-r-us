@@ -1,0 +1,56 @@
+<!--
+============================================
+; Title: grooming.ejs
+; Author: John Davidson
+; Data: 06/04/2023
+; Description: The Grooming page for Pets-R-Us assignment.
+============================================
+-->
+
+<!-- The Header partials for this page. -->
+<%- include('header.ejs') %>
+    <div class="container">
+      <h2>Grooming</h2>
+      <img src="/images/dog-wash.jpg" class="dog-wash">
+      <!-- Paragraph touching on grooming experience. -->
+      <div id="groom-statement">
+        <p>Welcome to our dog grooming services, where we believe that every pet deserves the utmost care and pampering.
+           Our mission is to provide a grooming experience that goes beyond mere aesthetics, ensuring your furry friend
+           feels loved, comfortable, and refreshed. With a team of skilled and passionate groomers, we prioritize the
+           well-being of your canine companion above all else. <br><br> From tail to snout, we strive for excellence in every
+           aspect of our grooming process, utilizing top-quality products, gentle techniques, and a deep understanding
+           of individual breed needs. Join us as we embark on a journey to transform your dog's grooming routine into a
+           blissful, tail-wagging adventure. Because when it comes to your four-legged family member, they deserve nothing
+           but the best.</p>
+      </div>
+      <!-- Section discussing the pricing options. -->
+      <div id="pricing">
+        <h2>Pricing</h2>
+        <table class="grooming-prices">
+          <tr>
+            <th>Dog Sizes</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Small<br>(10-20lbs) </td>
+            <td>$40</td>
+          </tr>
+          <tr>
+            <td>Medium<br>(21-45lbs)</td>
+            <td>$50</td>
+          </tr>
+          <tr>
+            <td>Large<br>(46-85lbs)</td>
+            <td>$65</td>
+          </tr>
+          <tr>
+            <td>Extra Large<br>(86-100lbs)</td>
+            <td>$80</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- The Footer partials for this page. -->
+    <%- include('footer.ejs') %>
+

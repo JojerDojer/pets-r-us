@@ -1,0 +1,125 @@
+<!--
+============================================
+; Title: index.ejs
+; Author: John Davidson
+; Data: 06/18/2023
+; Description: The Landing page for Pets-R-Us weekly assignment.
+============================================
+-->
+
+<!-- The Header partials for this page. -->
+<%- include('header.ejs') %>
+
+    <div class="container">
+
+      <div>
+        <!-- Section tag containing all store locations. -->
+        <section id="locations">
+
+          <!-- Location number one -->
+          <h2>Locations</h2>
+          <div class="location">
+            <h3>Haltom City, TX</h3>
+            <p>457 Rowdy Way</p>
+            <p>817-777-7777</p>
+          </div>
+
+          <!-- Location number two. -->
+          <div class="location">
+            <h3>Grapevine, TX</h3>
+            <p>6578 Washington St</p>
+            <p>817-888-8888</p>
+          </div>
+
+          <!-- Location number three. -->
+          <div class="location">
+            <h3>Fort worth, TX</h3>
+            <p>1655 Columbus Ave</p>
+            <p>817-999-9999</p>
+          </div>
+        </section>
+
+        <!-- Section tag containing the location Hours. -->
+        <section id="location-hours">
+          <div class="hours">
+            <h2>Store Hours</h2>
+            <p><b>Monday</b> 9:00am-7:00pm</p>
+            <p><b>Tuesday</b> 9:00am-7:00pm</p>
+            <p><b>Wednesday</b> 9:00am-7:00pm</p>
+            <p><b>Thursday</b> 9:00am-7:00pm</p>
+            <p><b>Friday</b> 9:00am-7:00pm</p>
+            <p><b>Saturday</b> 9:00am-7:00pm</p>
+            <p><b>Sunday</b> CLOSED</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Section tag containing the dog of the week. -->
+      <section id="dog-week">
+        <div>
+          <h2>Dog of the Week</h2>
+          <img src="/images/Golden-Retriever.jpg">
+          <p class="font-size">Say hello to max, our charming "Dog of the Week"! With enthusiasm for any activity and loads of energy,
+             Max will captivate every person he comes into contact with. He is the goodest of boys and brings joy
+             everywhere he goes. His gentle nature and playful spirit makes him desireable to be around. Whether
+             going on a walk, playing some of his favorite games, or simply relaxing indoors, Max will be a treasure to spend time with. He has
+             the utmost manners and all members here at Pets-R-Us love every chance we get care and love on him!
+          </p>
+        </div>
+      </section>
+      <br>
+
+      <!-- Testimonials from previous customer experience with Pets-R-Us. -->
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+          <p class="font-size">"We were recommended Pets-R-Us by a long time friend who praises their exceptional service and warm welcomes.
+            We brought in our dog, Lucy, for grooming, and needless to say they did not disappoint! She looked absolutely fabulous
+            and the products they use are top-of-the-line. We loved our experience with Pets-R-Us and you will too."
+            <br>
+            <b>-Amy</b>
+          </p>
+        </div>
+
+        <div class="testimonial">
+          <p class="font-size">"We recently got our two kids a new puppy, and we wanted to make sure that she had the proper training as she is an indoor dog,
+            and we have friends over all the time. We used Pets-R-Us training service and in just six weeks they completely transformed
+            Luna's behavior. They also encouraged some training sessions to be listened in on so we can see how she responded to certain
+            commands. We could not be happier with our experience!"
+            <br>
+            <b>-Susie</b>
+          </p>
+        </div>
+
+        <div class="testimonial">
+          <p class="font-size">"We have been long time Pets-R-Us customers and we wouldn't use any other business. Their employees treat our dog Toby like he
+            is one of their own. They are so respectable and kind people who also provide the best grooming service with affordable pricing
+            options. If you are looking for dog training, grooming, and/or boarding service, you need to use Pets-R-Us or you are missing out."
+            <br>
+            <b>-Johnathon</b>
+          </p>
+        </div>
+      </section>
+
+      <!-- The contact form section. -->
+      <section id="contact-us">
+        <h2>Contact Us!</h2>
+        <div class="contact-form">
+          <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" class="contact-input" name="fname">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" class="contact-input" name="lname">
+
+            <label class="email-margin" for="email">Email</label>
+            <input type="text" id="email" class="contact-input" name="email">
+          </form>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- The Footer partials for this page. -->
+    <%- include('footer.ejs') %>
+
