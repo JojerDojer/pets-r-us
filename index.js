@@ -32,6 +32,14 @@ app.get('/grooming', (req, res) => {
     res.render('grooming');
 });
 
+app.get('/boarding', (req, res) => {
+  res.render('boarding');
+})
+
+app.get('/training', (req, res) => {
+  res.render('training');
+})
+
 // Starts the server and listens for incoming requests.
 app.listen(3000, () => {
     console.log('Server started on port 3000');

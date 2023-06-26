@@ -1,0 +1,107 @@
+<!--
+============================================
+; Title: training.ejs
+; Author: John Davidson
+; Data: 06/04/2023
+; Description: The Training page for Pets-R-Us assignment.
+============================================
+-->
+
+<!-- The Header partials for this page. -->
+<%- include('header.ejs') %>
+    <div class="container">
+      <h2>Training</h2>
+      <img src="/images/dog-training.jpg" class="dog-training1">
+
+      <!-- Description of dog training service. -->
+      <section id="dog-trainer">
+        <div class="meet-trainer">
+          <h2>Meet the Trainer</h2>
+          <img src="/images/dog-trainer.jpg" class="dog-training2">
+          <p>At Pets-R-Us, we take pride in our exceptional team of dog trainers. Allow us to introduce you to our
+            expert dog trainer, Angela. With over 12 years of experience and a profound passion for dogs, Angela is
+            committed to providing exceptional results through her robust and proven training style. Angela has experience
+            working with various breeds, sizes, and behaviors, providing customized training to suit the need of each
+            individual dog.
+          </p>
+        </div>
+        <br>
+        <h3>What to Expect</h3>
+        <p class="what-to-expect">Our training begins with a complete assessment of your dog's behavior, temperament, and training needs.
+           Our trainers exercise positive reinforcement techniques and advanced training methods that produce quick and
+           effective results. We also understand the importance of educating and empowering owners. This approach ensures
+           clients that they can reinforce the training principles at home. We are thrilled with the prospect of working with
+           you and your dog!
+        </p>
+      </section>
+      <br>
+
+      <hr>
+
+      <div class="training-price">
+        <h3>Pricing Options</h3>
+        <!-- Tier 1 training prices. -->
+        <ol>
+          <li><b>Basic Obedience Training (6 weeks): $1500</b>
+            <ul>
+              <li>Includes basic commands (sit, stay, come, down)</li>
+              <li>Covers crate training and housebreaking</li>
+              <li>Addresses puppy behaviors (barking, biting, aggression, etc...)</li>
+            </ul>
+          </li>
+          <li><b>Puppy Socialization and Manners (4 weeks): $1200</b>
+            <ul>
+              <li>Gets puppies acquainted to socializing with others</li>
+              <li>Teaching puppies how to behavior while leashed</li>
+              <li>Forming good manners and puppy impulse control</li>
+            </ul>
+          </li>
+        </ol>
+
+        <br>
+
+        <!-- Tier 2 training prices. -->
+        <ol>
+          <li><b>Intermediate Obedience Training (8 weeks): $1500</b>
+            <ul>
+              <li>Builds upon basic commands</li>
+              <li>Introduces advanced commands</li>
+              <li>Address behavioral occurrences from adolescent dogs</li>
+            </ul>
+          </li>
+          <li><b>Behavior Modification for Adolescents (6 weeks): $1300</b>
+            <ul>
+              <li>Targets specific behavior issues</li>
+              <li>Implements positive reinforcement training</li>
+              <li>Introduces techniques for handling natural adolescent aggression</li>
+            </ul>
+          </li>
+        </ol>
+
+        <br>
+
+        <!-- Tier 3 training prices. -->
+        <ol>
+          <li><b>Obedience Training (10 weeks): $2200</b>
+            <ul>
+              <li>Enhances off-leash reliability and responsiveness</li>
+              <li>Introduces complex commands while providing distractions</li>
+              <li>Solidify new commands in various environments</li>
+            </ul>
+          </li>
+          <li><b>Canine Good Citizen Certification (8 weeks): $1800</b>
+            <ul>
+              <li>Prepare dogs for Canine Good Citizen evaluation</li>
+              <li>Covers all 10 testing procedures</li>
+              <li>Helps dogs become reliable and disciplined members of a community.</li>
+            </ul>
+          </li>
+        </ol>
+
+
+
+
+      </div>
+    </div>
+<!-- The Footer partials for this page. -->
+<%- include('footer.ejs') %>

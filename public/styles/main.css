@@ -87,7 +87,6 @@ h2 {
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 4px;
-
 }
 
 /* The styling for testimonial classes. */
@@ -168,6 +167,98 @@ th, td {
   padding: 8px;
   text-align: left;
 }
+
+/* TRAINING STYLING */
+
+/* The styling for the dog of the week image. */
+.dog-training1 {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.meet-trainer {
+  margin-top: 25px;
+  overflow: auto;
+}
+
+.dog-training2 {
+  float: left;
+  max-width: 100%;
+  height: 700px;
+  width: 475px;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.meet-trainer img {
+  margin-right: 25px;
+}
+
+.meet-trainer p {
+  line-height: 2;
+}
+
+.what-to-expect {
+  line-height: 1.75
+}
+
+.training-price {
+  margin-top: 50px;
+}
+
+/* BOARDING STYLING */
+.boarding-box1 {
+  margin:auto;
+  width: 65%;
+  height: 65%;
+}
+
+.dog-boarding1 {
+  max-width: 100%;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.boarding-box2 {
+  position: relative;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: black;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.dog-boarding2 {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 2px solid rgba(73, 30, 82, 0.774);
+}
+
+.font-size-20 b{
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

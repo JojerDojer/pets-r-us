@@ -1,0 +1,84 @@
+<!--
+============================================
+; Title: boarding.ejs
+; Author: John Davidson
+; Data: 06/04/2023
+; Description: The Boarding page for Pets-R-Us assignment.
+============================================
+-->
+
+<!-- The Header partials for this page. -->
+<%- include('header.ejs') %>
+
+<div class="container">
+  <h2>Boarding</h2>
+  <!-- Description of the Boarding service. -->
+  <div>
+    <p>We understand that your furry pal is an important part of your family and we treat them all like one of our own. We provide comfortable
+      accommodations for your pouch, ensuring that they will be treated like royalty while you're away. Our staff give loving care and attention
+       to the dogs that stay with us while you're away. Don't be a little surprised if you find it difficult to convince them to leave once you
+       have returned!
+    </p>
+  </div>
+
+  <!-- The div for boarding image. -->
+  <div class="boarding-box1">
+    <img src="/images/dog-boarding1.jpg" class="dog-boarding1">
+  </div>
+
+  <div>
+    <p>When you select our dog boarding service, you can have complete peace of mind knowing your dog will be under the supervision
+       of skilled and compassionate exports. Our team of devoted staff members is genuinely passionate about the animals we host and
+       serve. It makes to difference to us if your dog craves a snug and comfortable spot to chill out or seeks the company of
+       other playful canines during group activities, we customize our services to cater to their preferences.
+    </p>
+
+    <!-- The div for boarding image. -->
+    <div class="boarding-box2">
+      <img src="/images/dog-boarding2.jpg" class="dog-boarding2">
+    </div>
+  </div>
+
+  <!-- The boarding pricing section. -->
+  <div class="board-pricing">
+    <p>Our pricing is all-inclusive, covering case-by-case needs, feeding, daily exercise, and plenty of play time. We strictly
+       enforce a vaccination policy for all of our guests to ensure a healthy and protected environment.
+    </p>
+    <h2>Pricing options</h2>
+
+
+    <!-- Pricing for one dog. -->
+    <p>We offer affordable pricing with a minimum five day stay.
+    </p>
+    <div class="font-size-20">
+      <p><b>One Dog:</b></p>
+      <ul>
+        <li>Five Nights: $200</li>
+        <li>Each additional night: $40</li>
+      </ul>
+      <br>
+    </div>
+
+    <!-- Pricing for two dogs. -->
+    <div class="font-size-20">
+      <p><b>Two Dogs:</b></p>
+      <ul>
+        <li>Five Nights: $360</li>
+        <li>Each additional night: $70</li>
+      </ul>
+      <br>
+    </div>
+
+    <!-- Pricing for three dogs. -->
+    <div class="font-size-20">
+      <p><b>Three Dogs:</b></p>
+      <ul>
+        <li>Five Nights: $500</li>
+        <li>Each additional night: $80</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<!-- The Footer partials for this page. -->
+<%- include('footer.ejs') %>
