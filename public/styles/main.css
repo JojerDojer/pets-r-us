@@ -7,11 +7,16 @@
 ============================================
 */
 
+html {
+  height: 100%;
+}
+
 /* The body styling. */
 body {
   font-family: 'Wix Madefor Display', sans-serif;
   line-height: 1.5;
-  background-color: #C0DCDC;;
+  background-color: #C0DCDC;
+  min-height: 100vh;
 }
 
 /* The header styling. */
@@ -27,7 +32,8 @@ h2 {
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0px;
+  padding-bottom: 80px;
+
 }
 
 /* The styling for the navigation bar*/
@@ -61,7 +67,16 @@ h2 {
 .nav-bar a:hover {
   background-color: #C0DCDC;
   border-radius: 5px;
+}
 
+/* The styling for the footer on each page. */
+footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 2px;
+  background-color: #f5f5f5;
+  position: fixed;
 }
 
 /* The styling for the location class. */
@@ -120,11 +135,16 @@ form {
   margin: 35px;
 }
 
+/* Changes the position of the label. */
+.signup {
+  display: flex;
+  margin-left: 50px;
+}
 /* The styling of the input field. */
 .contact-input {
   width: 300px;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 5px;
   padding-left: 10px;
   padding-right: 10px;
   border: 1px solid #777;
@@ -132,18 +152,37 @@ form {
   outline: none;
 }
 
-/* This aligns the email input field with the other fields. */
-.email-margin {
-  margin-right: 40px;
+/* Creates space between each input field. */
+input.signup {
+  margin-bottom: 20px;
 }
 
-/* The styling for the footer on each page. */
-#footer {
-  bottom: 0;
-  width: 100%;
+/* The styling for the submit button. */
+.btn {
+  padding: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 7px;
+  margin-left: 170px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* This class simply centers text.*/
+.center {
   text-align: center;
-  padding: 2px;
-  background-color: #f5f5f5;
+}
+
+/* Changes the styling of the contact us section on homepage. */
+div.center {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* Creates space from the the contact us section and the footer on homepage. */
+#contact-us {
+  padding-bottom: 30px;
 }
 
 /* GROOMING STYLING */

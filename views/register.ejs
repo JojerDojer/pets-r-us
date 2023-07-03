@@ -1,0 +1,26 @@
+<!-- The Header partials for this page. -->
+<%- include('header.ejs') %>
+<div class="container">
+  <p class="center">Sign up to receive amazing discounts, promotions, and benefits from our loyalty program!</p>
+  <div class="contact-form">
+    <h3>Register</h3>
+
+    <!-- Allows customers to register an account. -->
+    <form action="/customers" method="post">
+
+      <!-- Label and input for customerID. -->
+      <label class="signup" for="customerId">Customer ID:</label>
+      <input type="text" id="customerId" class="contact-input signup" name="customerId">
+
+      <!-- Label and input for email. -->
+      <label class="signup" for="email">Email:</label>
+      <input type="text" id="email" class="contact-input signup" name="email">
+
+      <!-- The submit button used to register the account.  -->
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- The Footer partials for this page. -->
+<%- include('footer.ejs') %>
