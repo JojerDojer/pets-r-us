@@ -1,0 +1,36 @@
+<!-- The Header partials for this page. -->
+<%- include('header.ejs') %>
+
+<div class="container">
+  <h2>List of Registered Customers</h2>
+
+  <!-- Creates the table that stores customer data. -->
+  <% if (customers.length > 0) { %>
+    <table>
+      <thead>
+        <tr>
+          <td>Customer ID</td>
+          <td>Email</td>
+        </tr>
+      </thead>
+      <tbody>
+      <% customers.forEach(function(customer) { %>
+        <tr>
+          <td>
+            <%= customer.customerId %>
+          </td>
+          <td>
+            <%= customer.email %>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% } else { %>
+    <h3>Currently there are no customers in the database.</h3>
+    <% } %>
+</div>
+
+
+<!-- The Footer partials for this page. -->
+<%- include('footer.ejs') %>

@@ -13,22 +13,11 @@
 const express = require('express'); // Imports the Express module.
 const path = require('path'); // Imports the Path module.
 const mongoose = require('mongoose'); // Imports mongoose module.
+
 const Customer = require('./models/customer'); // Imports Customer module.
 
 // Express Module in the form of the variable app.
 const app = express();
-
-// Stores the connection string to mongoDB in variable form.
-const conn = 'mongodb+srv://web340_admin:%3C3webdev@bellevueuniversity.feyswh3.mongodb.net/?retryWrites=true&w=majority';
-// Creates the port number in variable form.
-const port = 3000;
-
-// Sets up the connection to MongoDB.
-mongoose.connect(conn).then(() => {
-  console.log('Connection to MongoDB database was successful');
-}).catch(err => {
-  console.log('MongoDB Error: ' + err.message);
-})
 
 // Sets the directory for the views templates.
 app.set('views', path.join(__dirname, 'views'));
@@ -38,6 +27,18 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Stores the connection string to mongoDB in variable form.
+const conn = 'mongodb+srv://web340_admin:<3webdev@bellevueuniversity.feyswh3.mongodb.net/web340DB?retryWrites=true&w=majority';
+// Creates the port number in variable form.
+const port = 3000;
+
+// Sets up the connection to MongoDB.
+mongoose.connect(conn).then(() => {
+  console.log('Connection to MongoDB database was successful');
+}).catch(err => {
+  console.log('MongoDB Error: ' + err.message);
+})
 
 // Get route for handling the landing URL path.
 app.get('/', (req, res) => {
@@ -74,31 +75,44 @@ app.get('/register', (req, res) => {
   });
 });
 
-// Post route handling registration.
-app.post('/customers', (req, res, next) => {
-  // Creates a new instance of the Customer model
+// If data is stored in the database successfully, render the home page.
+app.post('/customer-list', (req, res, next) => {
+  console.log(req.body.customerId);
+  console.log(req.body.email);
   const newCustomer = new Customer({
-    customerId: req.body.customerId,
-    email: req.body.email
-  });
+      customerId: req.body.customerId,
+      email: req.body.email
+  })
 
-  // Log the newCustomer object to console.
   console.log(newCustomer);
 
-  //Create the new customer in MongoDB.
-  Customer.create(newCustomer, function(err, customer) {
-    //If an error occurs during registration process, log an error.
-    if (err) {
-      console.log(err);
-      next(err);
-    //If registration process is successful, return to the landing page.
-    } else {
-      res.render('index', {
-        title: 'Home'
-      })
-    }
+  Customer.create(newCustomer)
+  .then (() => {
+    res.render('index', {
+      title: 'Home'
+    })
+  })
+  .catch((err) => {
+    console.log("Customer failed to register")
   })
 })
+
+// Get route for handling the customer-list page that displays the customer list data.
+app.get('/customer-list', (req, res) => {
+  Customer.find({})
+  .then ((results) => {
+    res.render('customer-list', {
+      title: 'Customer List',
+      customers: results
+    })
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+})
+
+
+
 
 // Starts the server and listens for incoming requests.
 app.listen(port, () => {

@@ -130,6 +130,8 @@ p {
   border-radius: 10px;
   }
 
+/* REGISTRATION PAGE STYLING */
+
 /* Creating more space in the form element. */
 form {
   margin: 35px;
@@ -288,6 +290,28 @@ th, td {
 .font-size-20 b{
   font-size: 20px;
 }
+
+/* CUSTOMER-LIST PAGE STYLING */
+
+table {
+  margin: auto;
+  width: 60%;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+thead {
+
+  background-color: #1E385D;
+  color: white;
+}
+
+thead td {
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 
 
 
