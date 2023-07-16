@@ -312,6 +312,45 @@ thead td {
   font-weight: 500;
 }
 
+/* BOOKING PAGE STYLE */
+
+.card-title {
+  font-size: 28px;
+  background-color: rgb(47, 47, 48);
+  color: white;
+  text-align: center;
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 450px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.form-field {
+  margin: auto;
+  padding-top: 15px;
+}
+
+input {
+  width: 250px;
+  height: 25px;
+  font-size: 14px;
+}
+
+.drop-down-menu {
+  width: 100px;
+  height: 25px;
+  font-size: 14px;
+}
+
+.booking-btn {
+  margin-left: 150px;
+}
+
+
 
 
 

@@ -1,0 +1,64 @@
+<!--
+============================================
+; Title: booking.ejs
+; Author: John Davidson
+; Data: 07/15/2023
+; Description: The appointment booking page for Pets-R-Us assignment.
+============================================
+-->
+
+<!-- The Header partials for this page. -->
+<%- include('header.ejs') %>
+
+<!-- The main card that nests all individual form fields. -->
+<div class="card center-div">
+  <div class="card-title">Book an Appointment</div>
+  <div class="card-content">
+    <div class="form">
+      <form action="/booking" method="post">
+
+        <!-- The Form field for the user name entry. -->
+        <div class="form-field">
+          <label for="userName">User Name:</label><br />
+          <input class="input" type="text" name="userName" id="userName" required>
+        </div>
+
+        <!-- The Form field for the first name entry. -->
+        <div class="form-field">
+          <label for="firstName">First Name:</label><br />
+          <input class="input" type="text" name="firstName" id="firstName" required>
+        </div>
+
+        <!-- The Form field for the last name entry. -->
+        <div class="form-field">
+          <label for="lastName">Last Name:</label><br />
+          <input class="input" type="text" name="lastName" id="lastName" required>
+        </div>
+
+        <!-- The Form field for the email entry. -->
+        <div class="form-field">
+          <label for="email">Email:</label><br />
+          <input class="input" type="text" name="email" id="email" required>
+        </div>
+
+        <!-- The Form field for the service option. -->
+        <div class="form-field">
+          <label for="service">Service:</label><br />
+          <select name="service" id="service" class="drop-down-menu full-width" required>
+            <% services.forEach((service) => { %>
+            <option value="'<%= service.value %>'"><%= service.text %></option>
+            <% }) %>
+          </select>
+        </div>
+        <!-- The Form field for the submit button. -->
+        <div class="form-field">
+          <button type="submit" class="btn booking-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- The Footer partials for this page. -->
+<%- include('footer.ejs') %>

@@ -13,8 +13,10 @@
 const express = require('express'); // Imports the Express module.
 const path = require('path'); // Imports the Path module.
 const mongoose = require('mongoose'); // Imports mongoose module.
+const fs = require('fs'); // Imports the File System module.
 
-const Customer = require('./models/customer'); // Imports Customer module.
+const Customer = require('./models/customer'); // Imports Customer model.
+const Appointment = require('./models/appointment'); // Imports the Appointment model.
 
 // Express Module in the form of the variable app.
 const app = express();
@@ -111,8 +113,40 @@ app.get('/customer-list', (req, res) => {
   })
 })
 
+// Get route for handling the booking page.
+app.get('/booking', (req, res) => {
+  let jsonFile = fs.readFileSync('./public/data/services.json');
+  let services = JSON.parse(jsonFile);
+  res.render('booking', {
+    title: 'Booking',
+    services: services
+  });
+});
 
+// Creates a new instance of the appointment model, requesting the information submitted and
+// logging it to the console.
+app.post('/booking', (req, res, next) => {
+  const newAppointment = new Appointment({
+    userName: req.body.userName,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    service: req.body.service
+  });
 
+  console.log(newAppointment);
+
+  // Takes the user back to the home page after setting an appointment.
+  Appointment.create(newAppointment)
+  .then(() => {
+    res.render('index', {
+      title: 'Home'
+    })
+  })
+  .catch((err) => {
+    console.log('The appointment failed to setup properly.')
+  });
+});
 
 // Starts the server and listens for incoming requests.
 app.listen(port, () => {
