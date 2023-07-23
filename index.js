@@ -167,8 +167,6 @@ app.get('/api/my-appointments/:email', async (req, res) => {
   }
 });
 
-
-
 // Starts the server and listens for incoming requests.
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
