@@ -148,6 +148,27 @@ app.post('/booking', (req, res, next) => {
   });
 });
 
+// Get route for handling the my-appointments page.
+app.get('/my-appointments', (req, res) => {
+  res.render('my-appointments', {
+    title: 'Appointments'
+  });
+});
+
+app.get('/api/my-appointments/:email', async (req, res) => {
+  try { // Extract email parameter from the request URL.
+    // Use Appointment model to find all appointments associated with the email searched.
+    const appointments = await Appointment.find({ email: req.params.email });
+    res.json(appointments); // Respond with retrieved appointment in JSON.
+  } catch (error) {
+    // If error occurs, log the error to console.
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+
+
 // Starts the server and listens for incoming requests.
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);

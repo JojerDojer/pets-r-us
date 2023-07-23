@@ -1,0 +1,84 @@
+<!--
+============================================
+; Title: my-appointments.ejs
+; Author: John Davidson
+; Data: 07/20/2023
+; Description: The page that displays appointment data for Pets-R-Us assignment.
+============================================
+-->
+
+<!-- The Header partials for this page. -->
+<%- include('header.ejs') %>
+
+<!-- The Footer partials for this page. -->
+<%- include('footer.ejs') %>
+<h2>Check Confirmed Appointments</h2>
+
+<!-- The card containing the form to search for customer appointments by email. -->
+<div class="card">
+  <div class="card-content">
+  <div class="card-title">Appointment look up</div>
+    <p class="instructions">Search for appointments by email</p>
+
+    <!-- The form that accepts an input type of email. -->
+    <form>
+      <div class="form-field">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <!-- The form-field containing a submit button that triggers an event listener. -->
+      <div class="form-field">
+        <button type="submit" class="btn booking-btn">Submit</button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<!-- The div that will display the appointment data. -->
+<div id="results"></div>
+
+<script>
+
+  // Attaches an event listener to the form's submit button.
+  document.querySelector('form').addEventListener('submit', function(e) {
+
+    // Prevent the default form submission behavior.
+    e.preventDefault();
+
+    // Contains the value of the 'email' id in the form of a variable.
+    const email = document.getElementById('email').value;
+
+    // Sends a fetch request to the server to get appointment data.
+    fetch(`/api/my-appointments/${email}`)
+      .then(res => res.json()) // Converts the response to JSON format.
+      .then(data => {
+
+        // An empty string that will contain the appointment data.
+        let appointData = '';
+
+        // Loop through each appointment object in the fetched data.
+        for (let appointment of data) {
+          // Builds a card element with appointment information and appends it to the 'appointData' string.
+          appointData += `
+            <div class="card appointment-card">
+              <div class="card-content">
+              <div class="card-title appointment-title">Customer Appointment</div>
+                <p><b>Service:</b> ${appointment.service}</p>
+                <p><b>Username:</b> ${appointment.userName}</p>
+                <p><b>First Name:</b> ${appointment.firstName}</p>
+                <p><b>Last Name:</b> ${appointment.lastName}</p>
+                <p><b>Email:</b> ${appointment.email}</p>
+              </div>
+            </div>`
+        }
+
+        // Binds the appointment data to the div 'results'.
+        document.getElementById('results').innerHTML = appointData;
+
+      })
+
+  })
+</script>
+

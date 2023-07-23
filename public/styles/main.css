@@ -8,6 +8,8 @@
 */
 
 html {
+  margin: 0;
+  padding: 0;
   height: 100%;
 }
 
@@ -349,6 +351,24 @@ input {
 .booking-btn {
   margin-left: 150px;
 }
+
+/* STYLING FOR MY-APPOINTMENTS PAGE */
+
+.instructions {
+  text-align: center;
+}
+
+.appointment-card p {
+  padding-left: 20px;
+}
+
+.appointment-title {
+  background-color: #1E385D
+}
+
+
+
+
 
 
 
